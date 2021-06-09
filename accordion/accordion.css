@@ -1,0 +1,149 @@
+body {
+    background-color: var(--secondary-color);
+}
+
+.accordion {
+    width: 100%;
+    display: block;
+    padding: 0;
+}
+
+.accordion.container {
+    max-width: 1200px;
+    margin: 0 auto 100px auto;
+}
+
+.accordion-header {
+    margin: 60px 0;
+
+    text-align: center;
+}
+
+.accordion-header__text {
+    color: var(--primary-color);
+    
+    font-size: 6rem;
+    font-weight: 800;
+    line-height: 1.3;
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.6);
+
+    user-select: none;
+}
+
+/* .accordion-body {
+    margin-bottom: 100px;
+} */
+
+.accordion-item {
+    width: 50%;
+    margin: 0 auto;
+    padding: 30px 40px;
+    border: 1px solid #252525;
+    border-bottom: none;
+
+    color: var(--white-color);
+
+    line-height: 1.3;
+}
+
+.accordion-item:first-child {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.accordion-item:last-child {
+    border-bottom: 1px solid #252525;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 2.4rem;
+    font-weight: 600;
+
+    transition: all ease 0.6s;
+}
+
+.item-header.active {
+    color: var(--primary-color) !important;
+}
+
+.item-header-icon {
+    margin-left: 24px;
+
+    color: var(--white-color) !important;
+
+    font-size: 1.4rem;
+
+    transform: rotate(0);
+    transition: all ease 0.6s;
+    will-change: transform;
+}
+
+.item-header.active .item-header-icon {
+    transform: rotate(180deg);
+}
+
+.item-body {
+    max-height: 0;
+
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.6;
+
+    overflow: hidden;
+    transition: all ease 0.6s;
+}
+
+.item-body.active {
+    padding-top: 30px;
+}
+
+/* PC Low Resolution */
+@media (min-width: 1024px) and (max-width: 1239px) { 
+    .container {
+        width: 984px;
+    }
+
+    .accordion-item {
+        width: 80%;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .container {
+        width: 644px;
+    }
+
+    .accordion-item {
+        width: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .accordion-body {
+        margin: 0 16px;
+    }
+
+    .accordion-header {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .accordion-item {
+        width: 100%;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .item-header:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+}
