@@ -31,7 +31,7 @@ itemHeaders.forEach((item, index) => {
 });
 
 document.onclick = e => {
-    if (!e.target.matches('.item-header')) {
+    if (!!$('.item-header.active') && !e.target.matches('.item-header')) {
         removeActiveItem();
     }
 }

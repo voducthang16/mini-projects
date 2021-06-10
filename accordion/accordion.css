@@ -30,10 +30,6 @@ body {
     user-select: none;
 }
 
-/* .accordion-body {
-    margin-bottom: 100px;
-} */
-
 .accordion-item {
     width: 50%;
     margin: 0 auto;
